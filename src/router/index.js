@@ -107,6 +107,19 @@ export const constantRoutes = [
     ]
   },
   {
+    path: '/tzgg',
+    component: Layout,
+    redirect: '/tzgg/index',
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/tzgg/index'),
+        name: 'Guide',
+        meta: { title: 'tzgg', icon: 'documentation', noCache: true }
+      }
+    ]
+  },
+  {
     path: '/profile',
     component: Layout,
     redirect: '/profile/index',
